@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohit Solanki | Portfolio</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f5f5dc; /* professional light beige */
+  overflow-x: hidden;
+}
+
+.topbar {
+  background-color: #2e2e2e; /* charcoal gray */
+  padding: 10px 30px;
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  font-size: 25px;
+}
+
+.topbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.topbar ul li a:hover {
+  color: #c19a6b; /* tan accent */
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #fefcf5; /* soft creamy beige */
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.photo img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #2e2e2e;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+  margin-left: 350px;
+}
+
+.intro {
+  font-family: 'Times New Roman', Times, serif;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.intro h1 {
+  font-size: 50px;
+  color: #1a1a1a;
+  margin: 0px;
+}
+
+.intro h2 span {
+  font-size: 50px;
+  color: #c19a6b; /* accent tan */
+  margin: 0px;
+}
+
+.intro p, .intro h3 {
+  font-size: 40px;
+  color: #2e2e2e;
+  margin: 0px;
+  margin-top: 0px;
+}
+
+section {
+  padding: 60px 40px;
+  background-color: #fffaf0; /* off-white card style */
+}
+
+section h2 {
+  text-align: left;
+  font-size: 50px;
+  margin: 0px;
+  color: #1a1a1a;
+}
+
+section p {
+  font-size: 30px;
+  text-align: center;
+  color: #2e2e2e;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.info ul {
+  align-items: center;
+  font-size: xx-large;
+  color: #2e2e2e;
+}
+
+.project-card {
+  background-color: #fefcf5;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.project-buttons {
+  margin-top: 50px;
+  display: flex;
+  font-size: x-large;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #c19a6b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a17855;
+}
+
+footer {
+  background-color: #2e2e2e;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+footer a {
+  color: #c19a6b;
+  text-decoration: none;
+}
+/* 📱 Responsive Design for Mobile View */
+@media (max-width: 768px) {
+  /* NAVBAR: Center it */
+  body, html
+  {
+    overflow-x: hidden;
+  }
+  .topbar {
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
+
+  .topbar ul {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+ .hero {
+    padding: 20px 10px;
+  }
+  /* HERO SECTION: Stack image and text */
+  .hero-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .photo img {
+    margin-left: 0;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .intro h1 {
+    font-size: 36px;
+  }
+
+  .intro h2 span {
+    font-size: 28px;
+  }
+
+  .intro p, .intro h3 {
+    font-size: 22px;
+  }
+
+  /* ABOUT ME: Paragraph center + justify */
+  .info h2 {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .info p {
+    text-align: justify;
+    font-size: 22px;
+    padding: 0 10px;
+  }
+
+  .info ul {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  /* PROJECT SECTION: Stack cards + buttons */
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .btn {
+    width: 90%;
+    text-align: center;
+  }
+
+  /* FOOTER: Keep default styling but reduce padding */
+  footer {
+    padding: 30px 15px;
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+  <header class="topbar">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#info">Info</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="photo ">
+        <img src="myphoto.jpg" alt="Mohit Solanki" />
+      </div>
+      <div class="intro">
+        <h1>Hello, Visitors 👋</h1>
+        <h2>I am <span>Mohit Solanki</span></h2>
+        <p>Welcome to my Portfolio…</p>
+        <h3>Let’s Create to be Creative</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="info">
+    <h2>🧑‍💼 About Me</h2>
+    <p>I'm Mohit Solanki, a dedicated and ambitious individual hailing from Junagadh City, Gujarat. My academic journey began at Jawahar Navodaya Vidyalaya (JNV), where I cultivated a strong foundation in discipline and learning. Pursuing higher education at Saurashtra University, Rajkot, I have been committed to expanding my knowledge and skills. My passion lies in continuous learning and striving for excellence in every endeavor.
+</p>
+
+    <h2>🛠️ Skills</h2>
+    <ul>
+      <li>AI Interaction & Prompt Engineering</li>
+      <li>AI-Powered Web Development</li>
+      <li>Programming: C, PHP, JavaScript</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Technical Adaptability</li>
+      <li>Creative Thinking & Problem Solving</li>
+    </ul>
+  </section>
+
+  <section class="projects" id="about">
+  <h2>📁 Projects</h2>
+
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="machinemaaster.png" alt="MachineMaster Website">
+      <p><strong>MachineMaster</strong> – A website</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="portfolio.png" alt="Portfolio Website">
+      <p><strong>Portfolio</strong></p>
+    </div>
+  </div>
+
+  <div class="project-buttons">
+    <a href="Resume.docx" class="btn" download>🗎 Click here to download Resume</a>
+    <a href="https://machinemaster.netlify.app" class="btn" target="_blank">🗂️ Click here to visit Project</a>
+  </div>
+</section>
+
+
+  <footer id="contact">
+    <h2>Thank you so much for visiting my Portfolio</h2>
+    <p>
+      🔗 <a href="https://www.linkedin.com/in/mohit-solanki-794521306/" target="_blank">LinkedIn</a> |
+      📸 <a href="https://www.instagram.com/meetttt__25/" target="_blank">Instagram</a> |
+      📱 <a href="tel:+919974342827">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>
